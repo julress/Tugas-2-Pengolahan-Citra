@@ -4,5 +4,6 @@
 
 
 a. Setiap elemen dalam histogram menunjukkan intensitas piksel sebesar 0-255
+
 b. komponen pada G memiliki bobot tertinggi, yang diikuti oleh R dan B. Jika gambar asli didominasi oleh warna hijau, intensitas di area tersebut akan lebih terang dalam gambar grayscale.
 Sebaliknya, area yang didominasi oleh warna merah atau biru akan terlihat lebih gelap.
