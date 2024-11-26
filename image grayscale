@@ -1,0 +1,25 @@
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Membaca gambar berwarna (RGB)
+image = imageio.imread('/content/wolf-3241382_640.jpg')
+
+# 2. Mengubah gambar menjadi grayscale
+# Menggunakan rumus konversi grayscale: Y = 0.299*R + 0.587*G + 0.114*B
+gray_image = 0.299 * image[:, :, 0] + 0.587 * image[:, :, 1] + 0.114 * image[:, :, 2]
+
+# Mengubah tipe data menjadi uint8
+gray_image = gray_image.astype(np.uint8)
+
+# 3. Menyimpan gambar grayscale
+# Gantilah 'output_gray_image.jpg' dengan nama file yang diinginkan untuk gambar grayscale
+imageio.imwrite('output_gray_image.jpg', gray_image)
+
+# 4. Menampilkan gambar grayscale
+plt.imshow(gray_image, cmap='gray')
+plt.axis('off')  # Menyembunyikan sumbu
+plt.title('Gambar Grayscale')
+plt.show()
+
+print("Gambar grayscale telah disimpan sebagai 'output_gray_image.jpg'.")
